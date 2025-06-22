@@ -1,9 +1,11 @@
 import Link from "next/link";
 import Section from "@/shared/ui/section/Section";
+import HeroSection from "@/shared/ui/hero-section/HeroSection";
 
 export default function Home() {
   return (
     <div className=" min-h-screen flex flex-col justify-between w-full gap-10">
+     <HeroSection/>
 
       <Section
         title="о нас"
