@@ -1,5 +1,7 @@
 export default function Tours() {
   return (
-    <div className="bg-red-600 h-screen"></div>
+    <main className="p-6 bg-black">
+      <h1>Все туры</h1>
+    </main>
   )
 }

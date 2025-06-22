@@ -8,6 +8,7 @@
     width: 100%;
     background-color: #F5F5F5;
     overflow: hidden;
+    text-align: center;
 }
 
 .background {
@@ -40,6 +41,7 @@
     font-weight: 700;
     color: #1E3A85;
     z-index: 10;
+    margin-bottom: 20px;
 }
 
 .content {
