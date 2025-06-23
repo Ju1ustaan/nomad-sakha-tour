@@ -19,8 +19,9 @@ const Section: React.FC<Props> = ({ title, titlePosition = 'left', subtitle, bac
     >
       <div className={styles.background}></div>
       <h2 className={`${styles.title} ${styles[titlePosition]}`}>{title}</h2>
-      <h5 className={styles.subtitle}>{subtitle}</h5>
       <div className={styles.content}>
+        
+      <h5 className={styles.subtitle}>{subtitle}</h5>
         {children}
       </div>
     </section>

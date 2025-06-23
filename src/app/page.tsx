@@ -3,6 +3,8 @@ import Section from "@/shared/ui/section/Section";
 import HeroSection from "@/shared/ui/hero-section/HeroSection";
 import MainCard from "@/entities/product/ui/MainCard";
 
+import Image from "next/image";
+
 
 const products = [
   {
@@ -56,9 +58,14 @@ export default function Home() {
       <Section
         title="о нас"
         titlePosition="right"
-        backgroundImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn6uQAVgH1exc933V6mNfW7Lf271yfQ33sEQ&s"
+        backgroundImage="/images/road-img.jpeg"
       >
-        <div></div>
+        <div className="flex justify-center items-center h-full gap-30">
+          <div className="overflow-hidden rounded-md w-[500px] aspect-square max-w-2xl z-10">
+            <Image src={'/images/road-img.jpeg'} alt="road to mount" width={500} height={500}/>
+          </div>
+          <p className="w-1/2 text-2xl text-[#333333] text-left">Путешествуем по Алматы и показываем его с высоты: горные тропы, озёра и бескрайние степи — всё, что остаётся за кадром у обычных туристов. Снимаем на дрон, делимся маршрутами и вдохновляем на приключения.</p>
+        </div>
       </Section>
 
       <Section
