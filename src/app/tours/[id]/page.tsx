@@ -1,11 +1,13 @@
 import { notFound } from 'next/navigation';
 import { type Metadata } from 'next';
 
-export default async function TourPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+type TourPageProps = {
+  params: { 
+    id: string 
+  };
+};
+
+export default async function TourPage({ params }: TourPageProps) {
   const { id } = params;
 
   if (!id) return notFound();
