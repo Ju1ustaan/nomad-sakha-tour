@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function HeroSection() {
     return (
-        <section className="min-h-screen mx-auto container_">
+        <section className="min-h-screen mx-auto container_ ">
             <div>
                 <video
                     autoPlay
