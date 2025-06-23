@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 
-// ✅ Строгая типизация параметров страницы
+
 type TourPageProps = {
   params: {
     id: string;

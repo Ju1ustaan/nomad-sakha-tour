@@ -1,13 +1,13 @@
 
 import { notFound } from 'next/navigation';
 
-type TourPageProps = {
+type TourDetailProps = {
   params: { 
     id: string 
   };
 };
 
-export default function TourPage({ params }: TourPageProps) {
+export default function TourPage({ params }: TourDetailProps) {
   const { id } = params;
   
   if (!id) return notFound();
