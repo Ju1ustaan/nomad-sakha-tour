@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import type { AppProps } from 'next/app';
 
 type PropsDetail = {
   params: {
@@ -6,7 +7,7 @@ type PropsDetail = {
   };
 };
 
-export default function TourPage({ params }: PropsDetail) {
+export default function TourPage({ params }: AppProps & PropsDetail) {
   const { id } = params;
 
   if (!id) return notFound();
