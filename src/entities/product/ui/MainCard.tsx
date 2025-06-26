@@ -1,14 +1,23 @@
 import React from 'react';
+import Link from 'next/link';
 import { Product } from '../model/types';
+import { MoreIcon } from '@/shared/assets/icons/icons';
+import { MobileCard } from './MobileCard';
+import { LargeCard } from './LargeCard';
 
 type Props = {
   product: Product;
+  reverse?: string;
 };
 
-const MainCard: React.FC<Props> = ({ product }) => {
+const MainCard: React.FC<Props> = ({ product, reverse }) => {
+
   return (
-    <div className="rounded-md overflow-hidden sticky z-10">
-      <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
+    <div>
+      
+      <LargeCard product={product} />  {/*  */}
+      <MobileCard product={product} reverse={reverse}/>
+
     </div>
   );
 };
