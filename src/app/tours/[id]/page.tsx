@@ -7,10 +7,10 @@ type Props = {
   };
 };
 
-export default async function TourDetailPage({ params }: Props) {
+export default function TourDetailPage({ params }: Props) {
   // const tour = await getTourById(params.id);
 
-  if (!params.id) return notFound();
+  // if (!tour) return notFound();
 
   // const { title, description, price, images, video } = tour.attributes;
 
