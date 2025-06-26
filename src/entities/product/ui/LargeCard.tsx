@@ -23,7 +23,7 @@ export const LargeCard: React.FC<Props> = ({ product }) => {
     "'>
           <p className='col-span-4 text-lg font-bold'>{product.name}</p>
           <p className='turnicate text-wrap w-full truncate col-span-4 line-clamp-4'>{product.description}</p>
-          <Link href={`/tours/${product.id}`} className='text-white font-semibold col-span-4 place-content-end place-items-end hover:opacity-20 duration-300 transition-opacity'>
+          <Link href={`/`} className='text-white font-semibold col-span-4 place-content-end place-items-end hover:opacity-20 duration-300 transition-opacity'>
             <p className='flex items-center justify-center gap-1'>
             Подробнее
               <i><MoreIcon className='fill-white' width={36} height={36}/></i>

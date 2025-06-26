@@ -19,7 +19,7 @@ export const MobileCard: React.FC<Props> = ({ product, reverse }) => {
             grid grid-cols-1 gap-2 ${reverse ? 'text-start' : 'text-end'}`}>
             <p className=' md:text-lg font-bold'>{product.name}</p>
             <p className='text-sm md:text-lg turnicate text-wrap w-full truncate line-clamp-2'>{product.description}</p>
-            <Link href={`/tours/${product.id}`} className='text-[#1E3A85] font-semibold '>
+            <Link href={`/`} className='text-[#1E3A85] font-semibold '>
             <p className={`flex items-center justify-end gap-1 ${reverse ? 'justify-start' : 'jestify-end'}`}>
             Подробнее
               <i><MoreIcon className='fill-[#1E3A85]' width={36} height={36}/></i>
