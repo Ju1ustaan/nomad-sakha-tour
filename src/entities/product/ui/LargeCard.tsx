@@ -11,7 +11,7 @@ export const LargeCard: React.FC<Props> = ({ product }) => {
       const imageUrl = product.image[0]?.url;
     return (
         <div className="hidden lg:block rounded-md overflow-hidden sticky z-10 h-[300px] w-full group">
-        <img src={`http://localhost:1337${imageUrl}`} alt={product.name} className="w-full h-full object-cover" />
+        <img src={`${process.env.NEXT_PUBLIC_API_URL?.slice(0, -4)}${imageUrl}`} alt={product.name} className="w-full h-full object-cover" />
         <div className='"
       absolute bottom-0 left-0 right-0
       bg-opacity-50 text-white p-4

@@ -9,10 +9,11 @@ type Props = {
 
 export const MobileCard: React.FC<Props> = ({ product, reverse }) => {    
   const imageUrl = product.image[0]?.url;
+  console.log('NEXT_PUBLIC_API_URL: ', `${process.env.NEXT_PUBLIC_API_URL?.slice(0, -4)}${imageUrl}`);
     return (
         <div className={`flex md:flex-col items-start border-b-1 py-3 border-gray-400 lg:hidden sticky z-10 ${reverse ? 'flex-row-reverse' : 'flex-row'}`}>
         <div className="rounded-md overflow-hidden  w-1/3 md:w-full aspect-square flex-shrink-0">
-          <img src={`http://localhost:1337${imageUrl}`} alt={product.name} className="block w-full h-full object-cover" />
+          <img src={`${process.env.NEXT_PUBLIC_API_URL?.slice(0, -4)}${imageUrl}`} alt={product.name} className="block w-full h-full object-cover" />
         </div>
           <div className={`w-2/3 md:w-full 
             bg-opacity-50 text-black px-2 md:px-4
