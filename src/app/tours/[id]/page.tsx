@@ -1,20 +1,22 @@
 import { notFound } from 'next/navigation';
-import type { AppProps } from 'next/app';
+import { getTourById } from '@/entities/product/api/fetchTourById';
 
-type PropsDetail = {
+type Props = {
   params: {
     id: string;
   };
 };
 
-export default function TourPage({ params }: AppProps & PropsDetail) {
-  const { id } = params;
+export default async function TourDetailPage({ params }: Props) {
+  // const tour = await getTourById(params.id);
 
-  if (!id) return notFound();
+  if (!params.id) return notFound();
+
+  // const { title, description, price, images, video } = tour.attributes;
 
   return (
-    <main className="p-6 bg-black text-white">
-      <h1>Тур #{id}</h1>
+    <main className="p-6 max-w-5xl mx-auto space-y-8 bg-black">
+     <p>tour {params.id}</p>
     </main>
   );
 }
