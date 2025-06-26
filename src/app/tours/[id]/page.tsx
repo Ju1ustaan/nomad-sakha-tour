@@ -1,8 +1,12 @@
 import { notFound } from 'next/navigation';
 
-type Props = { params: { id: string };};
+type PropsDetail = {
+  params: {
+    id: string;
+  };
+};
 
-const TourPage: React.FC<Props> = ({ params }) => {
+export default function TourPage({ params }: PropsDetail) {
   const { id } = params;
 
   if (!id) return notFound();
@@ -13,5 +17,3 @@ const TourPage: React.FC<Props> = ({ params }) => {
     </main>
   );
 }
-
-export default TourPage;
