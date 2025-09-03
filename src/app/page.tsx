@@ -75,7 +75,7 @@ export default function Home() {
         titlePosition="left"
         backgroundImage="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/41/27/12/154-300-12.jpg?w=900&h=500&s=1"
       >
-          <TourList/>
+          {/* <TourList/> */}
           <Link href={"/tours"} className="sticky bg-[#1E3A85] rounded-full py-4 px-6 z-10 hover:opacity-70 transition-opacity duration-300 cursor-pointer">Показать все туры</Link>
       </Section>
 
