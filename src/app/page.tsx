@@ -89,7 +89,7 @@ const Home = () => {
 
       <Section
         title="контакты"
-        subtitle=""
+        subtitle="Свяжитесь с нами для бронирования и вопросов"
         titlePosition="left"
       >
         <div></div>

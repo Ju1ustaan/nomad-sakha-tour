@@ -2,23 +2,32 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 
-import { 
-    InstagrammIcon, 
-    LangIcon, 
-    TelegramIcon, 
-    TikTokIcon, 
-    WhatsappIcon, 
-    YouTubeIcon 
+import {
+    InstagrammIcon,
+    LangIcon,
+    TelegramIcon,
+    TikTokIcon,
+    WhatsappIcon,
+    YouTubeIcon
 } from '../icons/Icons'
 
 const Header = () => {
     const [burgerOpen, setBurgerOpen] = useState(false);
     const [lang, setLang] = useState('ru');
 
+    const toggleMenu = () => {
+        if (!burgerOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        setBurgerOpen(!burgerOpen);
+    }
+
     return (
         <div className='w-full fixed top-2 z-100'>
             <div className={`bg-white container_ flex justify-between items-center py-2 px-4 rounded-full relative ${burgerOpen ? 'opacity-100' : 'opacity-80'} transition-all duration-300`}>
-                <Link href='/' className='text-black'>@nomad_sakha</Link>
+                <Link onClick={toggleMenu} href='/' className='text-black'>@nomad_sakha</Link>
 
                 <nav className=' hidden gap-4 md:flex items-center'>
                     <a href="#о нас" className='text-black group font-bold'>{lang === 'ru' ? 'О нас' : 'About us'}<div className='h-[1px] w-0 bg-black rounded-full transition-all duration-300 group-hover:w-full'></div></a>
@@ -32,7 +41,7 @@ const Header = () => {
                 </button>
 
                 <button
-                    onClick={() => setBurgerOpen(!burgerOpen)}
+                    onClick={toggleMenu}
                     className=" md:hidden relative z-50 w-8 h-8 flex items-center justify-center"
                 >
                     <svg
@@ -70,12 +79,12 @@ const Header = () => {
 
                 <div className={`flex flex-col justify-between md:hidden text-end gap-4 absolute top-full left-0 bg-white w-full overflow-hidden transition-all duration-300 rounded-4xl  px-4 ${burgerOpen ? 'h-screen pt-10 pb-20' : 'h-[0px] '} `}>
                     <nav className='flex flex-col gap-4 border-b-1 border-black pb-4'>
-                        <a href="#" className='text-black group'>{lang === 'ru' ? 'О нас' : 'About us'}</a>
-                        <a href="#" className='text-black group'>{lang === 'ru' ? 'Контакты' : 'Contacts'}</a>
-                        <a href="#" className='text-black group'>{lang === 'ru' ? 'Туры' : 'Tours'}</a>
-                        <a href="#" className='text-black group'>{lang === 'ru' ? 'Галерея' : 'Galery'}</a>
+                        <a onClick={toggleMenu} href="#о нас" className='text-black group font-bold'>{lang === 'ru' ? 'О нас' : 'About us'}</a>
+                        <a onClick={toggleMenu} href="#контакты" className='text-black group font-bold'>{lang === 'ru' ? 'Контакты' : 'Contacts'}</a>
+                        <Link onClick={toggleMenu} href={"/tours"} className='text-black group font-bold'>{lang === 'ru' ? 'Туры' : 'Tours'}</Link>
+                        <a onClick={toggleMenu} href="#галерея" className='text-black group font-bold'>{lang === 'ru' ? 'Галерея' : 'Galery'}</a>
 
-                        <button className='flex items-center justify-end ml-auto mr-0 gap-2 bg-[#1E3A85] text-white px-4 py-2 rounded-full w-fit'>
+                        <button onClick={() => setLang(lang === 'ru' ? 'en' : 'ru')} className='flex items-center justify-end ml-auto mr-0 gap-2 bg-[#1E3A85] text-white px-4 py-2 rounded-full w-fit'>
                             <LangIcon width={24} height={24} fill='white' />
                             Русский
                         </button>
