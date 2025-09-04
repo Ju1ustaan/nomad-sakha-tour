@@ -14,9 +14,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background:  linear-gradient(180deg, #020024 0%, #090979 100%);
+    --background:  linear-gradient(-45deg, #004d36 0%, #090979 100%);
     --foreground: #ededed;
   }
+}
+
+body, html {
+  scroll-behavior: smooth;
 }
 
 body {

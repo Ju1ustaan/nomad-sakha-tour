@@ -12,6 +12,7 @@ type Props = {
 const Section: React.FC<Props> = ({ title, titlePosition = 'left', subtitle, backgroundImage, children }) => {
   return (
     <section
+    id={title}
       className={styles.section}
       style={{
         backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,

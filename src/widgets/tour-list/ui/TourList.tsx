@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { getTours } from '@/entities/product/api/fetchTours';
 import MainCard from '@/entities/product/ui/MainCard';
 
-export default function TourList() {
+export const TourList = () => {
   const { data, isLoading, error } = useQuery({
     queryKey: ['tours'],
     queryFn: getTours,

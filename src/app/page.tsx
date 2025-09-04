@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Section from "@/shared/ui/section/Section";
 import HeroSection from "@/shared/ui/hero-section/HeroSection";
+import Section from "@/shared/ui/section/Section";
 
-import TourList from "@/widgets/tour-list/ui/TourList";
+import { TourList } from "@/widgets/tour-list/ui/TourList";
 
 import Image from "next/image";
 
@@ -51,7 +51,7 @@ const products = [
     price: 1200,
   },
 ];
-export default function Home() {
+const Home = () => {
   return (
     <div className=" min-h-screen flex flex-col justify-between w-full gap-10">
      <HeroSection/>
@@ -86,6 +86,16 @@ export default function Home() {
       >
         <div></div>
       </Section>
+
+      <Section
+        title="контакты"
+        subtitle=""
+        titlePosition="left"
+      >
+        <div></div>
+      </Section>
     </div>
   );
 }
+
+export default Home;
